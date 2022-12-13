@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "People")
 public class Person {
     @EmbeddedId
-    private PersonalData personal_data;
-    private String phone_number;
-    private String city_of_living;
+    private PersonalData personalData;
+    private String phoneNumber;
+    private String cityOfLiving;
 }

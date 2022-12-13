@@ -1,4 +1,4 @@
-insert into people(name, surname, age, phone_number, city_of_living)
+insert into people(name, surname, age, phoneNumber, cityOfLiving)
 values ('Harrison', 'Mclaughlin', 39, '1-886-665-5850', 'London'),
        ('Felix', 'Carr', 31, '1-836-751-1541', 'Madrid'),
        ('Ferdinand', 'Doyle', 39, '1-646-647-9277', 'Madrid'),
