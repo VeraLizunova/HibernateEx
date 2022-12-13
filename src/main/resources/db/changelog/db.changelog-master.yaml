@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - include:
+      file: migrations/V001__insert_data.sql
+      relativeToChangelogFile: true
