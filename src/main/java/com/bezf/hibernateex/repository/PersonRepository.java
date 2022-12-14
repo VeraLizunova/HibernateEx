@@ -12,7 +12,7 @@ import java.util.Optional;
 public interface PersonRepository extends JpaRepository<Person, PersonalData> {
     List<Person> findByCityOfLiving(String cityOfLiving);
 
-    List<Person> findByPersonalDataAgeLessThanOrderByPersonalDataAgeDesc(int age);
+    List<Person> findByPersonalDataAgeLessThanOrderByPersonalDataAgeAsc(int age);
 
     Optional<Person> findByPersonalDataNameAndPersonalDataSurname(String name, String surname);
 }

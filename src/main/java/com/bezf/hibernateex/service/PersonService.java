@@ -47,7 +47,7 @@ public class PersonService {
     }
 
     public List<Person> findByPersonalDataAgeLessThanOrderByPersonalDataAgeDesc(int age) {
-        return personRepository.findByPersonalDataAgeLessThanOrderByPersonalDataAgeDesc(age);
+        return personRepository.findByPersonalDataAgeLessThanOrderByPersonalDataAgeAsc(age);
     }
 
     public Optional<Person> findByPersonalDataNameAndPersonalDataSurname(String name, String surname) throws PersonNotFoundException {

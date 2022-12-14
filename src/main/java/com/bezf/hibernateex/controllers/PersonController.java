@@ -40,7 +40,7 @@ public class PersonController {
         personService.deleteById(personalData);
     }
 
-    @PostMapping("findAll")
+    @GetMapping("findAll")
     public List<Person> findAll() {
         return personService.findAll();
     }
