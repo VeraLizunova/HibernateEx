@@ -1,20 +1,18 @@
 package com.bezf.hibernateex.repository;
 
 import com.bezf.hibernateex.entities.Person;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
+import com.bezf.hibernateex.entities.PersonalData;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
-public class PersonRepository {
-    @PersistenceContext
-    private EntityManager entityManager;
+public interface PersonRepository extends JpaRepository<Person, PersonalData> {
+    List<Person> findByCityOfLiving(String cityOfLiving);
 
-    public List<Person> getPersonsByCity(String city) {
-        var query = entityManager.createQuery("select p from Person p where p.city_of_living = :city");
-        query.setParameter("city_of_living", city);
-        return (List<Person>) query.getResultList();
-    }
+    List<Person> findByPersonalDataAgeLessThanOrderByPersonalDataAgeAsc(int age);
+
+    Optional<Person> findByPersonalDataNameAndPersonalDataSurname(String name, String surname);
 }
