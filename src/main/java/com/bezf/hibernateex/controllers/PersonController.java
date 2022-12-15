@@ -20,6 +20,11 @@ public class PersonController {
         this.personService = personService;
     }
 
+    @GetMapping("hello")
+    public String hello() {
+        return "hello, user!";
+    }
+
     @PostMapping("save")
     public Person save(Person person) {
         return personService.save(person);
